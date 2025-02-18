@@ -27,15 +27,16 @@ def best_profits_fast(price):
         best = max(best, price[i] - min_price)
     return best
 
-# while True:
-#     n = random.randint(1,20)
-#     prices = [random.randint(1,10) for _ in range(n)]
+# not ending looping
+while True:
+    n = random.randint(1,20)
+    prices = [random.randint(1,10) for _ in range(n)]
 
-#     result_brute = best_profits_brute(prices)
-#     result_fast = best_profits_fast(prices)
+    result_brute = best_profits_brute(prices)
+    result_fast = best_profits_fast(prices)
 
-#     print(prices, result_brute, result_fast)
+    print(prices, result_brute, result_fast)
 
-#     if result_brute != result_fast:
-#         print("ERROR")
-#         break
+    if result_brute != result_fast:
+        print("ERROR")
+        break
